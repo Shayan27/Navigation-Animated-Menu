@@ -1,0 +1,40 @@
+ul#parentNav {
+    background: #faebd7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+}
+ul#parentNav li a {
+    padding: 25px 20px;
+    display: block;
+    font-family: 'Crete Round', serif;
+    text-decoration: none;
+    color: #000;
+}
+ul#parentNav li a:hover {
+    background-color: bisque;
+}
+ul#parentNav li#onhover ul#childNav {
+    position:absolute;
+    z-index:1;
+    max-height:0;
+    overflow:hidden;
+    -webkit-transform:perspective(400) rotate3d(1,0,0,-90deg);
+    -webkit-transform-origin:50% 0;
+    -webkit-transition:350ms;
+    -moz-transition:350ms;
+    -o-transition:350ms;
+    transition:350ms;
+    list-style: none;
+    padding:0;
+    background: #e6e6e6;
+}
+ul#parentNav li#onhover:hover ul#childNav {
+    max-height:1000px;
+    -webkit-transform:perspective(400) rotate3d(0,0,0,0);
+}
+ul#parentNav li#onhover ul#childNav li a {
+    padding: 12px 20px;
+}
